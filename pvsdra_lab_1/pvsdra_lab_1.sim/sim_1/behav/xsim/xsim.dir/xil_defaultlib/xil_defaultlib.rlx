@@ -1,0 +1,10 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sim_1/new/tb_mac.vhd,1758813498,vhdl,,,,tb_mac,,,,,,,,
+C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sources_1/new/add.vhd,1760021924,vhdl,C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sources_1/new/mac.vhd,,,add,,,,,,,,
+C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sources_1/new/controller.vhd,1758810891,vhdl,C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sources_1/new/mac.vhd,,,controller,,,,,,,,
+C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sources_1/new/mac.vhd,1760020906,vhdl,C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sim_1/new/tb_mac.vhd,,,mac,,,,,,,,
+C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sources_1/new/mult.vhd,1760014261,vhdl,C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sources_1/new/mac.vhd,,,mult,,,,,,,,
+C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sources_1/new/reg.vhd,1760017773,vhdl,C:/Users/Public/Documents/pvsdra_lab_1/pvsdra_lab_1.srcs/sources_1/new/mac.vhd,,,reg,,,,,,,,
