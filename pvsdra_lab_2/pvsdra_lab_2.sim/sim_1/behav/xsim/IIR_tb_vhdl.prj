@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../pvsdra_lab_2.srcs/sources_1/new/control.vhd" \
+"../../../../pvsdra_lab_2.srcs/sources_1/new/ROM.vhd" \
+"../../../../pvsdra_lab_2.srcs/sources_1/imports/new/mult.vhd" \
+"../../../../pvsdra_lab_2.srcs/sources_1/imports/new/reg.vhd" \
+"../../../../pvsdra_lab_2.srcs/sources_1/imports/new/controller.vhd" \
+"../../../../pvsdra_lab_2.srcs/sources_1/imports/new/mac.vhd" \
+"../../../../pvsdra_lab_2.srcs/sources_1/new/IIR.vhd" \
+"../../../../pvsdra_lab_2.srcs/sim_1/new/IIR_tb.vhd" \
+
+# Do not sort compile order
+nosort
