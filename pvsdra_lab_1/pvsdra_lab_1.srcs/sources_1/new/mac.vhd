@@ -16,9 +16,9 @@ entity mac is
 end mac;
 
 architecture Behavioral of mac is
-    signal result :std_logic_vector(2*N-1 downto 0);
+    signal result :std_logic_vector(N-1 downto 0);
     signal reg_out :std_logic_vector(N-1 downto 0);
-    signal sum : std_logic_vector(2*N-1 downto 0);
+    signal sum : std_logic_vector(N-1 downto 0);
     signal start_mpy :STD_LOGIC;
     signal ready : STD_LOGIC;
     signal write_acc : STD_LOGIC;    
@@ -36,16 +36,8 @@ begin
                 B => B,
                 P => result,
                 ready => ready);
-    
-    u_adder: entity work.add
-    generic map (
-                N => N
-             )
-            port map (
-                a => result,
-                b => reg_out,
-                subadd => result(2*N-1),
-                c => sum);
+
+    sum <=  result + reg_out;
     
     u_reg: entity work.reg
     generic map (

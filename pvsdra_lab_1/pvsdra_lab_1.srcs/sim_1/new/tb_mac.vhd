@@ -6,13 +6,13 @@ entity tb_mac is
 end tb_mac;
 
 architecture sim of tb_mac is
-    constant  N: integer := 16;
-    signal clk      : std_logic := '0';
-    signal rst      : std_logic := '0';
-    signal start    : std_logic := '0';
-    signal A, B     : std_logic_vector(N-1 downto 0) := (others => '0');
-    signal S        : std_logic_vector(N-1 downto 0);
-    signal ready_mac: std_logic;
+    constant    N     : integer   := 16;
+    signal      clk      : std_logic := '0';
+    signal      rst      : std_logic := '0';
+    signal      start    : std_logic := '0';
+    signal      A, B     : std_logic_vector(N-1 downto 0) := (others => '0');
+    signal      S        : std_logic_vector(N-1 downto 0);
+    signal      ready_mac: std_logic;
     
     constant clk_period : time := 8 ns;
     
@@ -48,45 +48,48 @@ begin
         rst <= '0';
         wait for clk_period * 2;
         
-        A <= x"0006";   -- 0.00018
-        B <= x"2500";   -- 0.289
+        A <= x"4000";   -- 0.5
+        B <= x"4000";   -- 0.25
         start <= '1';
         wait for clk_period;
         start <= '0';
         wait until ready_mac = '1';
         wait for clk_period;
        
-        A <= x"ffff";   -- -0.00003
-        B <= x"0003";   -- 0.00009
+        A <= x"C000";   -- -0.5
+        B <= x"2000";   -- 0.25
         start <= '1';
         wait for clk_period;
         start <= '0';
         wait until ready_mac = '1';
         wait for clk_period;
        
-        A <= x"fffa";   -- -0.00018
-        B <= x"fffb";   -- -0.00015
+        A <= x"C000";   -- -0.5
+        B <= x"E000";   -- -0.25
         start <= '1';
         wait for clk_period;
         start <= '0';
         wait until ready_mac = '1';
         wait for clk_period;
         
-        A <= x"0003";   -- 0.00009
-        B <= x"ffb1";   -- -0.0024
+        A <= x"1000";   -- 0.125
+        B <= x"1000";   -- 0.125
         start <= '1';
         wait for clk_period;
         start <= '0';
         wait until ready_mac = '1';
         wait for clk_period;
         
-        A <= x"fff9";   -- -0.00021
-        B <= x"000a";   -- 0.0003
+        A <= x"F000";   -- -0.125
+        B <= x"1000";   -- 0.125
         start <= '1';
         wait for clk_period;
         start <= '0';
         wait until ready_mac = '1';
         wait for clk_period;
+        
+        A <= x"0000";   
+        B <= x"0000"; 
         wait;
     end process;
 
