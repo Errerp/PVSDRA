@@ -32,12 +32,12 @@ begin
                 P => result,
                 ready => ready);
         
-    u_adder: entity work.add
-            port map (
-                a => reg_out,
-                b => result,
-                c => sum);
-    
+--    u_adder: entity work.add
+--            port map (
+--                a => reg_out,
+--                b => result,
+--                c => sum);
+    sum <= reg_out + result;
     u_reg: entity work.reg
             port map (
                 clk => clk,

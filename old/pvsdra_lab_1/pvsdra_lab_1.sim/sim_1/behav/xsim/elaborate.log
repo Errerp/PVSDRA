@@ -13,7 +13,6 @@ Compiling package ieee.std_logic_1164
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
 Compiling architecture behavioral of entity xil_defaultlib.mult [mult_default]
-Compiling architecture behavioral of entity xil_defaultlib.add [add_default]
 Compiling architecture behavioral of entity xil_defaultlib.reg [reg_default]
 Compiling architecture behavioral of entity xil_defaultlib.controller [controller_default]
 Compiling architecture behavioral of entity xil_defaultlib.mac [mac_default]

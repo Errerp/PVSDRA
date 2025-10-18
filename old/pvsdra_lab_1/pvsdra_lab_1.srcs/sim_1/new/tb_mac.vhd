@@ -13,7 +13,7 @@ architecture sim of tb_mac is
     signal S        : std_logic_vector(31 downto 0);
     signal ready_mac: std_logic;
     
-    constant clk_period : time := 20 ns;
+    constant clk_period : time := 8 ns;
     
 begin
 

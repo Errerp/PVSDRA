@@ -15,42 +15,41 @@ architecture Behavioral of controller is
     type state_type is (IDLE, START_MULT, WAIT_MULT, DONE);
     signal state : state_type := IDLE;
 begin
-    process(clk, rst)
+    process(clk)
     begin
-       
         if rising_edge(clk) then
-         if rst = '1' then
-                   state <= IDLE;
-                   start_mpy <= '0';
-                   write_acc <= '0';
-                   ready_mac <= '0';
-         else
-            start_mpy <= '0';
-            write_acc <= '0';
-            ready_mac <= '0';   
+            if rst = '1' then
+                state <= IDLE;
+                start_mpy <= '0';
+                write_acc <= '0';
+                ready_mac <= '0';
+            else
+                start_mpy <= '0';
+                write_acc <= '0';
+                ready_mac <= '0';   
             
-            case state is 
-                when IDLE => 
-                    if start = '1' then
-                        start_mpy <= '1';
-                        state <= START_MULT;
-                    end if;
-                
-                when START_MULT =>
-                    state <= WAIT_MULT;
+                case state is 
+                    when IDLE => 
+                        if start = '1' then
+                            start_mpy <= '1';
+                            state <= START_MULT;
+                        end if;
                     
-                when WAIT_MULT => 
-                    if ready = '1' then
-                        write_acc <= '1';
-                        state <= DONE;                        
-                    end if;
-                 
-                 when DONE =>
-                 ready_mac <= '1';  
-                 state <= IDLE;   
-          
-            end case;         
-        end if;
+                    when START_MULT =>
+                        state <= WAIT_MULT;
+                        
+                    when WAIT_MULT => 
+                        if ready = '1' then
+                            write_acc <= '1';
+                            state <= DONE;                        
+                        end if;
+                     
+                     when DONE =>
+                         ready_mac <= '1';  
+                         state <= IDLE;   
+              
+                end case;         
+            end if;
         end if;
     end process;
 

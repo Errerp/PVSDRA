@@ -12,7 +12,7 @@ entity controller is
 end controller;
 
 architecture Behavioral of controller is
-    type state_type is (IDLE, START_MULT, WAIT_MULT, WRITE, DONE);
+    type state_type is (IDLE, START_MULT, WAIT_MULT, DONE);
     signal state : state_type := IDLE;
 begin
     process(clk, rst)
@@ -26,29 +26,27 @@ begin
             start_mpy <= '0';
             write_acc <= '0';
             ready_mac <= '0';   
-            
+                    
             case state is 
                 when IDLE => 
                     if start = '1' then
                         start_mpy <= '1';
                         state <= START_MULT;
-                    end if;
-                
+                end if;
+                        
                 when START_MULT =>
                     state <= WAIT_MULT;
-                    
+                            
                 when WAIT_MULT => 
                     if ready = '1' then
                         write_acc <= '1';
-                        state <= WRITE;                        
-                    end if;
-                 
-                 when WRITE =>
-                    state <= DONE;
-                    
-                 when DONE => 
-                    ready_mac <= '1';
-                    state <= IDLE;
+                        state <= DONE;                        
+                end if;
+                         
+                when DONE =>
+                    ready_mac <= '1';  
+                    state <= IDLE;   
+                  
             end case;         
         end if;
     end process;
