@@ -55,7 +55,6 @@ begin
                         end if;
                         busy  <= '0';
                         ready <= '1';
-                        P <= sum(2*N-2 downto N-1);-- + sum(N-2);
                     else
                         if mt(0) = '1' then
                             sum <= mn(N-1) & (sum(2*N-1 downto N) + mn) & sum(N-1 downto 1);
@@ -69,7 +68,7 @@ begin
                 end if;
             end if;
         end if;
-            P <= sum(2*N-2 downto N-1);-- + sum(N-2);
+            P <= sum(2*N-2 downto N-1) + sum(N-2);
     end process;
 
 end Behavioral;

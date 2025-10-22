@@ -56,26 +56,33 @@ begin
         start <= '0';
         wait until ready = '1';
         
+        for i in 0 to 8 loop
         wait for clk_period*2;
         start <= '1';
+        wait for clk_period;
+        start <= '0';
+        wait until ready = '1';  
+        end loop;
+--        wait for clk_period*2;
+--        start <= '1';
 --        x_in <= std_logic_vector(to_signed(8192, N)); -- x[n] = 1 in Q2.13
-        wait for clk_period;
-        start <= '0';
-        wait until ready = '1';
+--        wait for clk_period;
+--        start <= '0';
+--        wait until ready = '1';
     
-        wait for clk_period*2;
-        start <= '1';
+--        wait for clk_period*2;
+--        start <= '1';
 --        x_in <= std_logic_vector(to_signed(4096, N)); -- x[n] = 0.5 in Q2.13";
-        wait for clk_period;
-        start <= '0';
-        wait until ready = '1';
+--        wait for clk_period;
+--        start <= '0';
+--        wait until ready = '1';
         
-        wait for clk_period*2;
-        start <= '1';
+--        wait for clk_period*2;
+--        start <= '1';
 --        x_in <= std_logic_vector(to_signed(-8192, N)); -- x[n] = -1 in Q2.13";
-        wait for clk_period;
-        start <= '0';
-        wait until ready = '1';
+--        wait for clk_period;
+--        start <= '0';
+--        wait until ready = '1';
         
         wait for clk_period;
         wait;

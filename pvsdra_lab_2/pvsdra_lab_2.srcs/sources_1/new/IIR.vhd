@@ -21,7 +21,7 @@ architecture Behavioral of IIR is
     signal mac_done : STD_LOGIC;              
     signal x_buf_0, x_buf_1, x_buf_2, x_buf_3 : STD_LOGIC_VECTOR(N-1 downto 0):= (others => '0');
     signal y_buf_1, y_buf_2, y_buf_3 : STD_LOGIC_VECTOR(N-1 downto 0) := (others => '0'); 
-    signal mac_in_x : STD_LOGIC_VECTOR(N-1 downto 0); 
+    signal mac_in : STD_LOGIC_VECTOR(N-1 downto 0); 
 begin
 
     control_inst : entity work.control
@@ -53,7 +53,7 @@ begin
         rst => rst,
         start => req,
         A => coef,
-        B => mac_in_x,
+        B => mac_in,
         S => mac_result,
         ready_mac => mac_done
     );
@@ -75,7 +75,7 @@ begin
         end if;
     end process io_logic;
 
-    mac_in_x <= x_buf_0 when addr = "000" else  -- x[n]
+    mac_in  <=  x_buf_0 when addr = "000" else  -- x[n]
                 x_buf_1 when addr = "001" else  -- x[n-1]
                 x_buf_2 when addr = "010" else  -- x[n-2]
                 x_buf_3 when addr = "011" else  -- x[n-3]

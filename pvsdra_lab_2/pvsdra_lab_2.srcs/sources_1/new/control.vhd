@@ -66,7 +66,6 @@ begin
                 when ON_MAC =>
                     req <= '0';
                     if mac_ready = '1' then
---                        req <= '0';
                         if count = 6 then
                             count <= 0;
                             state <= Y_WRITE;
