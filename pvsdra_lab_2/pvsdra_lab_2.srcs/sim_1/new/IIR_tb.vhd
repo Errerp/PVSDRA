@@ -20,8 +20,6 @@ architecture Behavioral of IIR_tb is
 begin
     uut : entity work.IIR
         generic map (
-            N_intg => 2,
-            N_frct => 13,
             N => N
         )
         Port map (
@@ -60,21 +58,21 @@ begin
         
         wait for clk_period*2;
         start <= '1';
-        x_in <= std_logic_vector(to_signed(8192, N)); -- x[n] = 0 in Q2.13
+--        x_in <= std_logic_vector(to_signed(8192, N)); -- x[n] = 1 in Q2.13
         wait for clk_period;
         start <= '0';
         wait until ready = '1';
     
         wait for clk_period*2;
         start <= '1';
-        x_in <= std_logic_vector(to_signed(4096, N)); -- x[n] = 0.5 in Q2.13";
+--        x_in <= std_logic_vector(to_signed(4096, N)); -- x[n] = 0.5 in Q2.13";
         wait for clk_period;
         start <= '0';
         wait until ready = '1';
         
         wait for clk_period*2;
         start <= '1';
-        x_in <= std_logic_vector(to_signed(-8192, N)); -- x[n] = -1 in Q2.13";
+--        x_in <= std_logic_vector(to_signed(-8192, N)); -- x[n] = -1 in Q2.13";
         wait for clk_period;
         start <= '0';
         wait until ready = '1';

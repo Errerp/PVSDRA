@@ -12,7 +12,7 @@ entity ROM is
 end ROM;
 
 architecture Behavioral of ROM is
-    type memory is array (0 to 6) of signed(N-1 downto 0);--STD_LOGIC_VECTOR(N-1 downto 0);
+    type memory is array (0 to 6) of signed(N-1 downto 0);
     constant coeffs : memory :=(
     0 => to_signed(148, N), -- b0 = 0,0180989330075144
     1 => to_signed(445, N), -- b1 = 0,0542967990225433

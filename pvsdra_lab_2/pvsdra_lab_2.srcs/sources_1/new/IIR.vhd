@@ -3,9 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity IIR is
-    generic (
-        N_intg : integer := 2; 
-        N_frct : integer := 13; 
+    generic ( 
         N : integer := 15);
     Port ( 
         clk : in STD_LOGIC;

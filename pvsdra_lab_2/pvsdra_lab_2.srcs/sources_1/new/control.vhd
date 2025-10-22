@@ -15,7 +15,7 @@ entity control is
 end control;
 
 architecture Behavioral of control is
-    type state_type is (IDLE, X_LOAD, CF_LOAD, ON_MAC, Y_WRITE, DONE);
+    type state_type is (IDLE, X_LOAD, CF_LOAD, REQ_PULSE, ON_MAC, Y_WRITE, DONE);
     signal state : state_type := IDLE;
     signal count : integer := 0;
     signal write_x : STD_LOGIC := '0';
@@ -57,12 +57,16 @@ begin
                     elsif count = 6 then
                         addr <= "110";                                                                        
                     end if;
+                    state <= REQ_PULSE;
+                
+                when REQ_PULSE =>
+                    req <= '1';
                     state <= ON_MAC;
                     
                 when ON_MAC =>
-                    req <= '1';
+                    req <= '0';
                     if mac_ready = '1' then
-                        req <= '0';
+--                        req <= '0';
                         if count = 6 then
                             count <= 0;
                             state <= Y_WRITE;
