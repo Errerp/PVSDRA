@@ -1,6 +1,6 @@
 [b,a] = butter(3,0.2);
 [h, w] = freqz(b,a);
-% plot(w/pi,abs(h))
+plot(w/pi,abs(h))
 
 scale_factor = 2^13; % 8192
 b_fixed = round(b * scale_factor);
