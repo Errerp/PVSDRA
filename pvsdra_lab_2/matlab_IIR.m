@@ -27,8 +27,16 @@ for n = 1:length(x)
     reg_ynm1 = y(n);
 end
 
-% figure;
-% subplot(211)
-% plot(x); ylim([-1.2 1.2]);
-% subplot(212)
-% plot(y,'r'); ylim([-1.2 1.2]);
+figure;
+subplot(211)
+stem(x); ylim([-1 1]);
+xlabel('отсчеты')
+ylabel('амплитуда')
+title('Исходный')
+
+subplot(212)
+stem(y,'r'); ylim([-0.5 0.5]);
+
+xlabel('отсчеты')
+ylabel('амплитуда')
+title('Результат')
