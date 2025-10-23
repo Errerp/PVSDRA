@@ -1,5 +1,7 @@
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Public/Documents/PVSDRA/pvsdra_lab_2/pvsdra_lab_2.srcs/sources_1/new/control.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity control
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Public/Documents/PVSDRA/pvsdra_lab_2/pvsdra_lab_2.srcs/sources_1/new/ROM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ROM
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Public/Documents/PVSDRA/pvsdra_lab_2/pvsdra_lab_2.srcs/sources_1/new/IIR.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity IIR
 INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Public/Documents/PVSDRA/pvsdra_lab_2/pvsdra_lab_2.srcs/sim_1/new/IIR_tb.vhd" into library xil_defaultlib

@@ -57,11 +57,11 @@ begin
         wait until ready = '1';
         
         for i in 0 to 8 loop
-        wait for clk_period*2;
-        start <= '1';
-        wait for clk_period;
-        start <= '0';
-        wait until ready = '1';  
+            wait for clk_period*2;
+            start <= '1';
+            wait for clk_period;
+            start <= '0';
+            wait until ready = '1';  
         end loop;
 --        wait for clk_period*2;
 --        start <= '1';

@@ -15,7 +15,7 @@ end IIR;
 
 architecture Behavioral of IIR is
     signal rst, mac_ready, req, wr_x, wr_y, ready_filt : STD_LOGIC; 
-    signal addr : STD_LOGIC_VECTOR(2 downto 0);   
+    signal addr : integer := 0;   
     signal coef : STD_LOGIC_VECTOR(N-1 downto 0);  
     signal mac_result : STD_LOGIC_VECTOR(N-1 downto 0); 
     signal mac_done : STD_LOGIC;              
@@ -75,13 +75,13 @@ begin
         end if;
     end process io_logic;
 
-    mac_in  <=  x_buf_0 when addr = "000" else  -- x[n]
-                x_buf_1 when addr = "001" else  -- x[n-1]
-                x_buf_2 when addr = "010" else  -- x[n-2]
-                x_buf_3 when addr = "011" else  -- x[n-3]
-                y_buf_1 when addr = "100" else  -- y[n-1]
-                y_buf_2 when addr = "101" else  -- y[n-2]
-                y_buf_3 when addr = "110" else  -- y[n-3]
+    mac_in  <=  x_buf_0 when addr = 0 else  -- x[n]
+                x_buf_1 when addr = 1 else  -- x[n-1]
+                x_buf_2 when addr = 2 else  -- x[n-2]
+                x_buf_3 when addr = 3 else  -- x[n-3]
+                y_buf_1 when addr = 4 else  -- y[n-1]
+                y_buf_2 when addr = 5 else  -- y[n-2]
+                y_buf_3 when addr = 6 else  -- y[n-3]
                 (others => '0');              
 
     y_out <= mac_result when (ready_filt = '1');

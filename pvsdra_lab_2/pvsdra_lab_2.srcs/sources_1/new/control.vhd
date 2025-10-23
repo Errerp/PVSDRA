@@ -6,7 +6,7 @@ entity control is
     Port ( clk : in STD_LOGIC;
            start : in STD_LOGIC;
            mac_ready : in STD_LOGIC;
-           addr : out STD_LOGIC_VECTOR(2 downto 0);
+           addr : out integer;
            req : out STD_LOGIC;
            wr_x : out STD_LOGIC;
            wr_y : out STD_LOGIC;
@@ -42,21 +42,21 @@ begin
                     
                 when CF_LOAD =>
                     write_x <= '0';
-                    if count = 0 then
-                        addr <= "000";
-                    elsif count = 1 then
-                        addr <= "001";
-                    elsif count = 2 then
-                        addr <= "010";
-                    elsif count = 3 then
-                        addr <= "011"; 
-                    elsif count = 4 then
-                        addr <= "100";   
-                    elsif count = 5 then
-                        addr <= "101";
-                    elsif count = 6 then
-                        addr <= "110";                                                                        
-                    end if;
+--                    if count = 0 then
+--                        addr <= "000";
+--                    elsif count = 1 then
+--                        addr <= "001";
+--                    elsif count = 2 then
+--                        addr <= "010";
+--                    elsif count = 3 then
+--                        addr <= "011"; 
+--                    elsif count = 4 then
+--                        addr <= "100";   
+--                    elsif count = 5 then
+--                        addr <= "101";
+--                    elsif count = 6 then
+--                        addr <= "110";                                                                        
+--                    end if;
                     state <= REQ_PULSE;
                 
                 when REQ_PULSE =>
@@ -87,6 +87,8 @@ begin
             end case;
         end if;
     end process;
+    
+    addr <= count;
     wr_x <= write_x;
     wr_y <= write_y;
 end Behavioral;
