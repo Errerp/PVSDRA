@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Oct 22 11:40:03 2025
+| Date         : Sun Oct 26 15:03:03 2025
 | Host         : DESKTOP-7OC3ATR running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file IIR_control_sets_placed.rpt
 | Design       : IIR
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    13 |
-| Unused register locations in slices containing registers |    30 |
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    26 |
 +----------------------------------------------------------+-------+
 
 
@@ -37,7 +37,7 @@ Table of Contents
 |      8 |            1 |
 |     12 |            1 |
 |     14 |            1 |
-|    16+ |           10 |
+|    16+ |            9 |
 +--------+--------------+
 
 
@@ -47,34 +47,33 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              56 |           10 |
+| No           | No                    | No                     |              64 |           12 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              28 |            5 |
-| Yes          | No                    | No                     |             224 |           25 |
+| No           | Yes                   | No                     |              12 |            3 |
+| Yes          | No                    | No                     |             224 |           27 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             190 |           31 |
+| Yes          | Yes                   | No                     |             194 |           28 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------+------------------------------------------+---------------------------------+------------------+----------------+
-|    Clock Signal    |               Enable Signal              |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
-+--------------------+------------------------------------------+---------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG     | mac_inst/u_mult/count[3]_i_1_n_0         | mac_inst/u_ctrl/SR[0]           |                2 |              8 |
-|  clk_IBUF_BUFG     |                                          | control_inst/rst                |                3 |             12 |
-|  clk_IBUF_BUFG     | control_inst/FSM_onehot_state[6]_i_1_n_0 |                                 |                3 |             14 |
-|  clk_IBUF_BUFG     |                                          | coeff_ROM_inst/coef[14]_i_1_n_0 |                2 |             16 |
-|  clk_IBUF_BUFG     |                                          |                                 |                4 |             26 |
-|  control_inst/E[0] |                                          |                                 |                6 |             30 |
-|  clk_IBUF_BUFG     | mac_inst/u_ctrl/write_acc                | control_inst/rst                |                4 |             30 |
-|  clk_IBUF_BUFG     | mac_inst/u_ctrl/E[0]                     | control_inst/rst                |               10 |             30 |
-|  clk_IBUF_BUFG     | mac_inst/u_mult/mt[14]_i_1_n_0           | control_inst/rst                |                3 |             30 |
-|  clk_IBUF_BUFG     | mac_inst/u_mult/sum[28]_i_2_n_0          | mac_inst/u_ctrl/SR[0]           |                4 |             30 |
-|  clk_IBUF_BUFG     | mac_inst/u_ctrl/count                    | control_inst/count[31]_i_1_n_0  |                8 |             62 |
-|  clk_IBUF_BUFG     | control_inst/y_buf_3_reg[0][0]           |                                 |                9 |             90 |
-|  clk_IBUF_BUFG     | control_inst/x_buf_3_reg[0][0]           |                                 |               13 |            120 |
-+--------------------+------------------------------------------+---------------------------------+------------------+----------------+
++--------------------+------------------------------------------+--------------------------------+------------------+----------------+
+|    Clock Signal    |               Enable Signal              |        Set/Reset Signal        | Slice Load Count | Bel Load Count |
++--------------------+------------------------------------------+--------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG     | mac_inst/u_mult/count[3]_i_1_n_0         | mac_inst/u_ctrl/SR[0]          |                2 |              8 |
+|  clk_IBUF_BUFG     |                                          | control_inst/rst               |                3 |             12 |
+|  clk_IBUF_BUFG     | control_inst/FSM_onehot_state[6]_i_1_n_0 |                                |                1 |             14 |
+|  control_inst/E[0] |                                          |                                |                6 |             30 |
+|  clk_IBUF_BUFG     | mac_inst/u_ctrl/mn_reg[14][0]            | control_inst/rst               |                5 |             30 |
+|  clk_IBUF_BUFG     | mac_inst/u_ctrl/E[0]                     | control_inst/rst               |                4 |             30 |
+|  clk_IBUF_BUFG     | mac_inst/u_mult/mt[14]_i_1_n_0           | control_inst/rst               |                4 |             30 |
+|  clk_IBUF_BUFG     | mac_inst/u_mult/sum[28]_i_2_n_0          | mac_inst/u_ctrl/SR[0]          |                5 |             32 |
+|  clk_IBUF_BUFG     |                                          |                                |                6 |             34 |
+|  clk_IBUF_BUFG     | control_inst/count                       | control_inst/count[31]_i_1_n_0 |                8 |             64 |
+|  clk_IBUF_BUFG     | control_inst/y_buf_3_reg[0][0]           |                                |               12 |             90 |
+|  clk_IBUF_BUFG     | control_inst/x_buf_3_reg[0][0]           |                                |               14 |            120 |
++--------------------+------------------------------------------+--------------------------------+------------------+----------------+
 
 
