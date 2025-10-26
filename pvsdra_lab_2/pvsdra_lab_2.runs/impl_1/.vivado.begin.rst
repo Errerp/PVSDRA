@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-<<<<<<< Updated upstream
-    <Process Command="vivado.bat" Owner="Максим" Host="DESKTOP-7OC3ATR" Pid="4884">
-=======
-    <Process Command="vivado.bat" Owner="Максим" Host="DESKTOP-7OC3ATR" Pid="3700">
->>>>>>> Stashed changes
-    </Process>
-</ProcessHandle>
