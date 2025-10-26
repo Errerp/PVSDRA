@@ -15,9 +15,15 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
+<<<<<<< Updated upstream
 INFO: Helper process launched with PID 19296 
 ---------------------------------------------------------------------------------
 Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 435.359 ; gain = 96.035
+=======
+INFO: Helper process launched with PID 10400 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 434.801 ; gain = 94.793
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'IIR' [C:/Users/Public/Documents/PVSDRA/pvsdra_lab_2/pvsdra_lab_2.srcs/sources_1/new/IIR.vhd:16]
 	Parameter N bound to: 15 - type: integer 
@@ -40,17 +46,28 @@ INFO: [Synth 8-256] done synthesizing module 'controller' (5#1) [C:/Users/Public
 INFO: [Synth 8-256] done synthesizing module 'mac' (6#1) [C:/Users/Public/Documents/PVSDRA/pvsdra_lab_2/pvsdra_lab_2.srcs/sources_1/imports/new/mac.vhd:18]
 INFO: [Synth 8-256] done synthesizing module 'IIR' (7#1) [C:/Users/Public/Documents/PVSDRA/pvsdra_lab_2/pvsdra_lab_2.srcs/sources_1/new/IIR.vhd:16]
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 490.402 ; gain = 151.078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 490.402 ; gain = 151.078
+=======
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 489.855 ; gain = 149.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 489.855 ; gain = 149.848
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 490.402 ; gain = 151.078
+=======
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 489.855 ; gain = 149.848
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'control'
@@ -84,7 +101,11 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'controller'
 WARNING: [Synth 8-327] inferring latch for variable 'y_out_reg' [C:/Users/Public/Documents/PVSDRA/pvsdra_lab_2/pvsdra_lab_2.srcs/sources_1/new/IIR.vhd:87]
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 490.402 ; gain = 151.078
+=======
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 489.855 ; gain = 149.848
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -228,7 +249,11 @@ WARNING: [Synth 8-3332] Sequential element (mac_inst/u_mult/sum_reg[2]) is unuse
 WARNING: [Synth 8-3332] Sequential element (mac_inst/u_mult/sum_reg[1]) is unused and will be removed from module IIR.
 WARNING: [Synth 8-3332] Sequential element (mac_inst/u_mult/sum_reg[0]) is unused and will be removed from module IIR.
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 645.238 ; gain = 305.914
+=======
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 639.168 ; gain = 299.160
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -241,7 +266,11 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 645.238 ; gain = 305.914
+=======
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 639.168 ; gain = 299.160
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -253,7 +282,11 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 645.293 ; gain = 305.969
+=======
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 640.133 ; gain = 300.125
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -277,7 +310,11 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 645.293 ; gain = 305.969
+=======
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 640.133 ; gain = 300.125
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -290,7 +327,11 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 645.293 ; gain = 305.969
+=======
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 640.133 ; gain = 300.125
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -302,25 +343,41 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 645.293 ; gain = 305.969
+=======
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 640.133 ; gain = 300.125
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 645.293 ; gain = 305.969
+=======
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 640.133 ; gain = 300.125
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 645.293 ; gain = 305.969
+=======
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 640.133 ; gain = 300.125
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 645.293 ; gain = 305.969
+=======
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 640.133 ; gain = 300.125
+>>>>>>> Stashed changes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -338,6 +395,7 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    24|
+<<<<<<< Updated upstream
 |3     |LUT1   |     2|
 |4     |LUT2   |    54|
 |5     |LUT3   |    18|
@@ -348,21 +406,44 @@ Report Cell Usage:
 |10    |LD     |    15|
 |11    |IBUF   |    17|
 |12    |OBUF   |    16|
+=======
+|3     |LUT1   |     4|
+|4     |LUT2   |    55|
+|5     |LUT3   |    10|
+|6     |LUT4   |    40|
+|7     |LUT5   |    36|
+|8     |LUT6   |    29|
+|9     |MUXF7  |    15|
+|10    |FDRE   |   232|
+|11    |FDSE   |     3|
+|12    |LD     |    15|
+|13    |IBUF   |    17|
+|14    |OBUF   |    16|
+>>>>>>> Stashed changes
 +------+-------+------+
 
 Report Instance Areas: 
 +------+-----------------+-----------+------+
 |      |Instance         |Module     |Cells |
 +------+-----------------+-----------+------+
+<<<<<<< Updated upstream
 |1     |top              |           |   519|
 |2     |  coeff_ROM_inst |ROM        |    10|
 |3     |  control_inst   |control    |   158|
 |4     |  mac_inst       |mac        |   197|
 |5     |    u_ctrl       |controller |    13|
+=======
+|1     |top              |           |   497|
+|2     |  coeff_ROM_inst |ROM        |    11|
+|3     |  control_inst   |control    |   134|
+|4     |  mac_inst       |mac        |   198|
+|5     |    u_ctrl       |controller |    14|
+>>>>>>> Stashed changes
 |6     |    u_mult       |mult       |   147|
 |7     |    u_reg        |\reg       |    29|
 +------+-----------------+-----------+------+
 ---------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 645.293 ; gain = 305.969
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
@@ -370,6 +451,15 @@ Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 .
 Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 645.293 ; gain = 305.969
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
+=======
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 640.133 ; gain = 300.125
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 640.133 ; gain = 300.125
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 640.133 ; gain = 300.125
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 71 Unisim elements for replacement
+>>>>>>> Stashed changes
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -378,6 +468,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 15 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
+<<<<<<< Updated upstream
 39 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
 synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 739.133 ; gain = 412.438
@@ -386,3 +477,13 @@ INFO: [Common 17-1381] The checkpoint 'C:/Users/Public/Documents/PVSDRA/pvsdra_l
 INFO: [runtcl-4] Executing : report_utilization -file IIR_utilization_synth.rpt -pb IIR_utilization_synth.pb
 report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 739.133 ; gain = 0.000
 INFO: [Common 17-206] Exiting Vivado at Sun Oct 26 15:02:19 2025...
+=======
+40 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 738.965 ; gain = 411.656
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Public/Documents/PVSDRA/pvsdra_lab_2/pvsdra_lab_2.runs/synth_1/IIR.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file IIR_utilization_synth.rpt -pb IIR_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 738.965 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 22 22:10:03 2025...
+>>>>>>> Stashed changes

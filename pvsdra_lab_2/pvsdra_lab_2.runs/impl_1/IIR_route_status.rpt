@@ -1,11 +1,19 @@
 Design Route Status
                                                :      # nets :
    ------------------------------------------- : ----------- :
+<<<<<<< Updated upstream
    # of logical nets.......................... :         623 :
        # of nets not needing routing.......... :         211 :
            # of internally routed nets........ :         211 :
        # of routable nets..................... :         412 :
            # of fully routed nets............. :         412 :
+=======
+   # of logical nets.......................... :         601 :
+       # of nets not needing routing.......... :         237 :
+           # of internally routed nets........ :         237 :
+       # of routable nets..................... :         364 :
+           # of fully routed nets............. :         364 :
+>>>>>>> Stashed changes
        # of nets with routing errors.......... :           0 :
    ------------------------------------------- : ----------- :
 

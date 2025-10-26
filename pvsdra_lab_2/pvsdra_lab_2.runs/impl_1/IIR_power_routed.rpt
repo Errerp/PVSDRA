@@ -1,7 +1,11 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+<<<<<<< Updated upstream
 | Date             : Sun Oct 26 15:03:18 2025
+=======
+| Date             : Wed Oct 22 22:10:55 2025
+>>>>>>> Stashed changes
 | Host             : DESKTOP-7OC3ATR running 64-bit major release  (build 9200)
 | Command          : report_power -file IIR_power_routed.rpt -pb IIR_power_summary_routed.pb -rpx IIR_power_routed.rpx
 | Design           : IIR
@@ -30,6 +34,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
+<<<<<<< Updated upstream
 | Total On-Chip Power (W)  | 1.056        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
@@ -38,6 +43,16 @@ Table of Contents
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 72.8         |
 | Junction Temperature (C) | 37.2         |
+=======
+| Total On-Chip Power (W)  | 1.291        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.184        |
+| Device Static (W)        | 0.107        |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 70.1         |
+| Junction Temperature (C) | 39.9         |
+>>>>>>> Stashed changes
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,6 +67,7 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
+<<<<<<< Updated upstream
 | Slice Logic    |     0.408 |      497 |       --- |             --- |
 |   LUT as Logic |     0.280 |      180 |     17600 |            1.02 |
 |   CARRY4       |     0.090 |       24 |      4400 |            0.55 |
@@ -62,6 +78,19 @@ Table of Contents
 | I/O            |     0.097 |       33 |       100 |           33.00 |
 | Static Power   |     0.104 |          |           |                 |
 | Total          |     1.056 |          |           |                 |
+=======
+| Slice Logic    |     0.524 |      475 |       --- |             --- |
+|   LUT as Logic |     0.373 |      150 |     17600 |            0.85 |
+|   CARRY4       |     0.100 |       24 |      4400 |            0.55 |
+|   Register     |     0.037 |      250 |     35200 |            0.71 |
+|   F7/F8 Muxes  |     0.008 |       15 |     17600 |            0.09 |
+|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   Others       |     0.000 |       11 |       --- |             --- |
+| Signals        |     0.562 |      362 |       --- |             --- |
+| I/O            |     0.098 |       33 |       100 |           33.00 |
+| Static Power   |     0.107 |          |           |                 |
+| Total          |     1.291 |          |           |                 |
+>>>>>>> Stashed changes
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,8 +100,13 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
+<<<<<<< Updated upstream
 | Vccint    |       1.000 |     0.928 |       0.923 |      0.005 |
 | Vccaux    |       1.800 |     0.009 |       0.002 |      0.007 |
+=======
+| Vccint    |       1.000 |     1.160 |       1.154 |      0.006 |
+| Vccaux    |       1.800 |     0.010 |       0.002 |      0.007 |
+>>>>>>> Stashed changes
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.015 |       0.014 |      0.001 |
@@ -84,7 +118,11 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+<<<<<<< Updated upstream
 | Vccpint   |       1.000 |     0.024 |       0.000 |      0.024 |
+=======
+| Vccpint   |       1.000 |     0.026 |       0.000 |      0.026 |
+>>>>>>> Stashed changes
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -145,6 +183,7 @@ Table of Contents
 +------------------+-----------+
 | Name             | Power (W) |
 +------------------+-----------+
+<<<<<<< Updated upstream
 | IIR              |     0.952 |
 |   coeff_ROM_inst |    <0.001 |
 |   control_inst   |     0.142 |
@@ -152,6 +191,15 @@ Table of Contents
 |     u_ctrl       |     0.046 |
 |     u_mult       |     0.366 |
 |     u_reg        |     0.016 |
+=======
+| IIR              |     1.184 |
+|   coeff_ROM_inst |     0.004 |
+|   control_inst   |     0.197 |
+|   mac_inst       |     0.627 |
+|     u_ctrl       |     0.056 |
+|     u_mult       |     0.507 |
+|     u_reg        |     0.015 |
+>>>>>>> Stashed changes
 +------------------+-----------+
 
 

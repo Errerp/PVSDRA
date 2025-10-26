@@ -1,7 +1,11 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+<<<<<<< Updated upstream
 | Date         : Sun Oct 26 15:03:18 2025
+=======
+| Date         : Wed Oct 22 22:10:55 2025
+>>>>>>> Stashed changes
 | Host         : DESKTOP-7OC3ATR running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file IIR_clock_utilization_routed.rpt
 | Design       : IIR
@@ -44,7 +48,11 @@ Table of Contents
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+-------+----------------------+---------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site          | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin           | Net           |
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+-------+----------------------+---------------+
+<<<<<<< Updated upstream
 | g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 1 |         232 |               0 |              |       | clk_IBUF_BUFG_inst/O | clk_IBUF_BUFG |
+=======
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y0 | n/a          |                 1 |         235 |               0 |              |       | clk_IBUF_BUFG_inst/O | clk_IBUF_BUFG |
+>>>>>>> Stashed changes
 +-----------+-----------+-----------------+------------+---------------+--------------+-------------------+-------------+-----------------+--------------+-------+----------------------+---------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
@@ -68,7 +76,11 @@ Table of Contents
 +----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+--------------------------+-------------------+
 | Local Id | Driver Type/Pin | Constraint | Site/BEL         | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin               | Net               |
 +----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+--------------------------+-------------------||
+<<<<<<< Updated upstream
 | 0        | FDRE/Q          | None       | SLICE_X40Y18/AFF | X1Y0         |          15 |               2 |              |       | control_inst/ready_reg/Q | control_inst/E[0] - Static -
+=======
+| 0        | FDRE/Q          | None       | SLICE_X36Y13/AFF | X1Y0         |          15 |               2 |              |       | control_inst/ready_reg/Q | control_inst/E[0] - Static -
+>>>>>>> Stashed changes
 +----------+-----------------+------------+------------------+--------------+-------------+-----------------+--------------+-------+--------------------------+-------------------||
 * Local Clocks in this context represents only clocks driven by non-global buffers
 ** Clock Loads column represents the clock pin loads (pin count)
@@ -84,7 +96,11 @@ Table of Contents
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | X0Y0              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1100 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+<<<<<<< Updated upstream
 | X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  232 |  1100 |   74 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
+=======
+| X1Y0              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  235 |  1100 |   67 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
+>>>>>>> Stashed changes
 | X0Y1              |    0 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |  1100 |    0 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
 | X1Y1              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  1100 |    0 |   350 |    0 |    40 |    0 |    20 |    0 |    20 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
@@ -109,7 +125,11 @@ All Modules
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net           |
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------+
+<<<<<<< Updated upstream
 | g0        | BUFG/O          | n/a               |       |             |               |         232 |        0 |              0 |        0 | clk_IBUF_BUFG |
+=======
+| g0        | BUFG/O          | n/a               |       |             |               |         235 |        0 |              0 |        0 | clk_IBUF_BUFG |
+>>>>>>> Stashed changes
 +-----------+-----------------+-------------------+-------+-------------+---------------+-------------+----------+----------------+----------+---------------+
 * Logic Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -121,7 +141,11 @@ All Modules
 |    | X0 | X1   |
 +----+----+------+
 | Y1 |  0 |    0 |
+<<<<<<< Updated upstream
 | Y0 |  0 |  232 |
+=======
+| Y0 |  0 |  235 |
+>>>>>>> Stashed changes
 +----+----+------+
 
 
@@ -131,7 +155,11 @@ All Modules
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net           |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
+<<<<<<< Updated upstream
 | g0        | n/a   | BUFG/O          | None       |         232 |               0 | 232 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
+=======
+| g0        | n/a   | BUFG/O          | None       |         235 |               0 | 235 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | clk_IBUF_BUFG |
+>>>>>>> Stashed changes
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+---------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
