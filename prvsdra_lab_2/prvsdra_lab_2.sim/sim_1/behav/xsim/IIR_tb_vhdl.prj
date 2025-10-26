@@ -7,7 +7,7 @@ vhdl xil_defaultlib  \
 "../../../../prvsdra_lab_2.srcs/sources_1/imports/Desktop/controller.vhd" \
 "../../../../prvsdra_lab_2.srcs/sources_1/imports/Desktop/mac.vhd" \
 "../../../../prvsdra_lab_2.srcs/sources_1/imports/Desktop/IIR.vhd" \
-"../../../../prvsdra_lab_2.srcs/sources_1/imports/Desktop/IIR_tb.vhd" \
+"../../../../prvsdra_lab_2.srcs/sim_1/imports/Desktop/IIR_tb.vhd" \
 
 # Do not sort compile order
 nosort
