@@ -27,9 +27,9 @@ for n = 1:length(x)
     reg_ynm1 = y(n);
 end
 
-figure;
-subplot(211)
-stem(x); ylim([-1 1]);
-
-subplot(212)
-stem(y,'r'); ylim([-0.5 0.5]);
+% figure;
+% subplot(211)
+% stem(x); ylim([-1 1]);
+% 
+% subplot(212)
+% stem(y,'r'); ylim([-0.5 0.5]);

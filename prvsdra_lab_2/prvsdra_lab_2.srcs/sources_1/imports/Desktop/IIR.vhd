@@ -25,12 +25,11 @@ architecture Behavioral of IIR is
     signal mac_in : STD_LOGIC_VECTOR(N-1 downto 0); 
 
     signal a0       : STD_LOGIC_VECTOR(N-1 downto 0);
-    signal y_scaled : STD_LOGIC_VECTOR(N-1 downto 0);
+    signal y_scaled : STD_LOGIC_VECTOR(N-1 downto 0) := (others => '0');
     signal mult_start : STD_LOGIC := '0';
     signal mult_ready : STD_LOGIC;
 
 begin
-
     control_inst : entity work.control
     Port map (
         clk => clk,
@@ -115,6 +114,17 @@ begin
         end if;
     end process;
 
-    y_out <= y_scaled when mult_ready = '1';
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if mult_ready = '1' then
+                y_out <= y_scaled;
+            end if;
+        end if;
+    end process;
     ready <= mult_ready;
+
+--    y_out <= mac_result when (ready_filt = '1');
+--    ready <= ready_filt;
+
 end Behavioral;

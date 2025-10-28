@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Oct 26 17:22:17 2025
+| Date         : Tue Oct 28 14:55:14 2025
 | Host         : DESKTOP-7OC3ATR running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file IIR_timing_summary_routed.rpt -pb IIR_timing_summary_routed.pb -rpx IIR_timing_summary_routed.rpx -warn_on_violation
 | Design       : IIR
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 281 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 296 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
  There are 10 register/latch pins with no clock driven by root clock pin: control_inst/count_reg[0]/Q (HIGH)
 
@@ -118,8 +118,6 @@ Table of Contents
 
  There are 10 register/latch pins with no clock driven by root clock pin: control_inst/count_reg[9]/Q (HIGH)
 
- There are 15 register/latch pins with no clock driven by root clock pin: gain_mult_inst/ready_reg/Q (HIGH)
-
 
 2. checking constant_clock
 --------------------------
@@ -133,7 +131,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 707 pins that are not constrained for maximum delay. (HIGH)
+ There are 722 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

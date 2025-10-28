@@ -8,10 +8,3 @@ for i = 1:length(h_q13)
      fprintf(fid, '%04x\n', val);
 end
 fclose(fid);
-
-
-% converted_sound = uint8(sound * 127 + 128); 
-% fid = fopen('sh_sound.hec', 'w');
-% fwrite(fid, converted_sound, 'uint8'); 
-
-
