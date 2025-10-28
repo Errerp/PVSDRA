@@ -69,7 +69,7 @@ begin
             end if;
         end if;
         
-        P <= sum(2*N-2 downto N-1) + sum(N-1);
+        P <= sum(2*N-2 downto N-1) + sum(N-2);
     end process;
 
 end Behavioral;
