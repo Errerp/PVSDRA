@@ -49,23 +49,47 @@ figure;
 subplot(1,3,1);
 specgram(sound_old, nfft, fs, window, 475);
 set(gca, 'Clim', [-65 15]);
-xlabel('�����, �');
-ylabel('�������, ��');
-title('��������');
+xlabel('Время, с');
+ylabel('Частота, Гц');
+title('Исходный сигнал');
 colorbar;
 
 subplot(1,3,2);
 specgram(sound_new, nfft, fs, window, 475);
 set(gca, 'Clim', [-65 15]);
-xlabel('�����, �');
-ylabel('�������, ��');
-title('��������� ������� (VHDL)');
+xlabel('Время, с');
+ylabel('Частота, Гц');
+title('Результат фильтра (VHDL)');
 colorbar;
 
 subplot(1,3,3);
-specgram(sound_new, nfft, fs, window, 475);
+specgram(y, nfft, fs, window, 475);
 set(gca, 'Clim', [-65 15]);
-xlabel('�����, �');
-ylabel('�������, ��');
-title('��������� ������� (matlab)');
+xlabel('Время, с');
+ylabel('Частота, Гц');
+title('Результат фильтра (matlab)');
 colorbar;
+
+%%
+figure;
+subplot(1,3,1);
+t_old = (0:length(sound_old)-1) / fs;
+plot(t_old, sound_old);
+title('Исходный сигнал');
+xlabel('Время, с');
+ylabel('Амплитуда');
+grid on;
+
+subplot(1,3,2);
+t_new = (0:length(sound_new)-1) / fs;
+plot(t_new, sound_new);
+title('Результат фильтра (VHDL)');
+xlabel('Время, с');
+grid on;
+
+subplot(1,3,3);
+plot(t_new, y);
+title('Результат фильтра (matlab)');
+xlabel('Время, с');
+ylabel('Амплитуда');
+grid on;
