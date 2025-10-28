@@ -63,6 +63,7 @@ begin
                 writeline(y_file, line_out);
                end if;
            end loop;
+           wait for clk_period*2;
            std.env.stop;
 
 
