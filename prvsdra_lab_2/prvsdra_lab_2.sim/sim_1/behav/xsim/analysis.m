@@ -41,7 +41,7 @@ for n = 1:length(sound_old)
     reg_ynm1 = y(n);
     
 end
-a0 = 0.5;
+a0 = 1;
 y =y*a0; 
 
 %%

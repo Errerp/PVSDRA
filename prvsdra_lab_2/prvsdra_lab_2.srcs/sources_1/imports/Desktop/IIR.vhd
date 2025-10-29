@@ -111,15 +111,9 @@ begin
             else
                 mult_start <= '0';
             end if;
-        end if;
-    end process;
-
-    process(clk)
-    begin
-        if rising_edge(clk) then
             if mult_ready = '1' then
                 y_out <= y_scaled;
-            end if;
+            end if;            
         end if;
     end process;
     ready <= mult_ready;

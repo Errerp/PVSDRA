@@ -44,14 +44,13 @@
 #endif
 typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
+extern void execute_74(char*, char *);
 extern void execute_75(char*, char *);
-extern void execute_76(char*, char *);
 extern void execute_69(char*, char *);
 extern void execute_70(char*, char *);
 extern void execute_71(char*, char *);
 extern void execute_72(char*, char *);
 extern void execute_73(char*, char *);
-extern void execute_74(char*, char *);
 extern void execute_36(char*, char *);
 extern void execute_37(char*, char *);
 extern void execute_38(char*, char *);
@@ -65,12 +64,12 @@ extern void execute_63(char*, char *);
 extern void execute_65(char*, char *);
 extern void transaction_0(char*, char*, unsigned, unsigned, unsigned);
 extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[21] = {(funcp)execute_75, (funcp)execute_76, (funcp)execute_69, (funcp)execute_70, (funcp)execute_71, (funcp)execute_72, (funcp)execute_73, (funcp)execute_74, (funcp)execute_36, (funcp)execute_37, (funcp)execute_38, (funcp)execute_39, (funcp)execute_41, (funcp)execute_60, (funcp)execute_66, (funcp)execute_59, (funcp)execute_62, (funcp)execute_63, (funcp)execute_65, (funcp)transaction_0, (funcp)vhdl_transfunc_eventcallback};
-const int NumRelocateId= 21;
+funcp funcTab[20] = {(funcp)execute_74, (funcp)execute_75, (funcp)execute_69, (funcp)execute_70, (funcp)execute_71, (funcp)execute_72, (funcp)execute_73, (funcp)execute_36, (funcp)execute_37, (funcp)execute_38, (funcp)execute_39, (funcp)execute_41, (funcp)execute_60, (funcp)execute_66, (funcp)execute_59, (funcp)execute_62, (funcp)execute_63, (funcp)execute_65, (funcp)transaction_0, (funcp)vhdl_transfunc_eventcallback};
+const int NumRelocateId= 20;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/IIR_tb_behav/xsim.reloc",  (void **)funcTab, 21);
+	iki_relocate(dp, "xsim.dir/IIR_tb_behav/xsim.reloc",  (void **)funcTab, 20);
 	iki_vhdl_file_variable_register(dp + 12216);
 	iki_vhdl_file_variable_register(dp + 12272);
 	iki_vhdl_file_variable_register(dp + 14328);

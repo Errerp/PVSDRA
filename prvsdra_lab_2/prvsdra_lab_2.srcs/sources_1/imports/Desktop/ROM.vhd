@@ -21,7 +21,7 @@ architecture Behavioral of ROM is
     2 => to_signed(14418, N), -- a1 = -1,76004188034317
     3 => to_signed(-9690, N), -- a2 = 1,18289326203783
     4 => to_signed(2278, N), -- a3 = -0,278059917634546
-    5 => to_signed(4096, N)); --a0 = 0.5
+    5 => to_signed(8192, N)); --a0 = 1
 
 begin
     process(clk)
