@@ -22,21 +22,21 @@ create_project -in_memory -part xc7z010clg400-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/Public/Documents/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.cache/wt [current_project]
-set_property parent.project_path C:/Users/Public/Documents/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.xpr [current_project]
+set_property webtalk.parent_dir {E:/4 курс/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.cache/wt} [current_project]
+set_property parent.project_path {E:/4 курс/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo-z7-10:part0:1.2 [current_project]
-set_property ip_output_repo c:/Users/Public/Documents/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.cache/ip [current_project]
+set_property ip_output_repo {e:/4 курс/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  C:/Users/Public/Documents/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/control.vhd
-  C:/Users/Public/Documents/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/ROM.vhd
-  C:/Users/Public/Documents/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/mult.vhd
-  C:/Users/Public/Documents/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/reg.vhd
-  C:/Users/Public/Documents/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/controller.vhd
-  C:/Users/Public/Documents/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/mac.vhd
-  C:/Users/Public/Documents/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/IIR.vhd
+  {E:/4 курс/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/control.vhd}
+  {E:/4 курс/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/ROM.vhd}
+  {E:/4 курс/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/mult.vhd}
+  {E:/4 курс/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/reg.vhd}
+  {E:/4 курс/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/controller.vhd}
+  {E:/4 курс/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/mac.vhd}
+  {E:/4 курс/PVSDRA/prvsdra_lab_2/prvsdra_lab_2.srcs/sources_1/imports/Desktop/IIR.vhd}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
