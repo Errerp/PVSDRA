@@ -5,7 +5,8 @@ entity FSM is
     Generic ( N : integer := 12);
     Port (  clk : in STD_LOGIC;
             rst : in STD_LOGIC;
-            bit_idx : in integer);
+            bit_idx : in integer;
+            calc : out STD_LOGIC);
 end FSM;
 
 architecture Behavioral of FSM is
@@ -22,12 +23,19 @@ begin
             case state is 
                 when IDLE =>
                     state <= SHIFT;
+                    
                 when SHIFT =>
+                    calc <= '1';
+                    state <= CALCULATE;
+                    
+                when CALCULATE =>
                     if bit_idx >= N-3 then
+                        calc <= '0';
+                        state <= DONE;
+                    else 
                         state <= CALCULATE;
                     end if;
-                when CALCULATE =>
-                    state <= DONE;
+                    
                 when DONE =>
                     state <= IDLE;
             end case;
