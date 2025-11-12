@@ -5,7 +5,9 @@ entity FSM is
     Generic ( N : integer := 12);
     Port (  clk : in STD_LOGIC;
             rst : in STD_LOGIC;
+            start : in STD_LOGIC;
             bit_idx : in integer;
+            load : out STD_LOGIC;
             calc : out STD_LOGIC;
             ready : out STD_LOGIC);
 end FSM;
@@ -18,15 +20,22 @@ begin
     begin
         if rising_edge(clk) then
             if rst = '1' then 
+                ready <= '0';
+                load <= '0';
+                calc <= '0';
                 state <= IDLE;
             end if;
             
             case state is 
                 when IDLE =>
                     ready <= '0';
-                    state <= SHIFT;
+                    if start = '1' then
+                        load <= '1';
+                        state <= SHIFT;
+                    end if;
                     
                 when SHIFT =>
+                    load <= '0';
                     calc <= '1';
                     state <= CALCULATE;
                     
