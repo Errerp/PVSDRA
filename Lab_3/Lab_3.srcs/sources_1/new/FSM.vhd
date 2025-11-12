@@ -6,7 +6,8 @@ entity FSM is
     Port (  clk : in STD_LOGIC;
             rst : in STD_LOGIC;
             bit_idx : in integer;
-            calc : out STD_LOGIC);
+            calc : out STD_LOGIC;
+            ready : out STD_LOGIC);
 end FSM;
 
 architecture Behavioral of FSM is
@@ -22,6 +23,7 @@ begin
             
             case state is 
                 when IDLE =>
+                    ready <= '0';
                     state <= SHIFT;
                     
                 when SHIFT =>
@@ -37,6 +39,7 @@ begin
                     end if;
                     
                 when DONE =>
+                    ready <= '1';
                     state <= IDLE;
             end case;
         end if;
