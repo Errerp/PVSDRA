@@ -48,7 +48,7 @@ begin
     bit_count : process(clk)
     begin
         if rising_edge(clk) then
-            if calc <= '1' and bit_idx < N - 3 then
+            if calc = '1' and bit_idx < (N - 3) then
                 bit_idx <= bit_idx + 3;
             else 
                 bit_idx <= 0;
@@ -77,8 +77,13 @@ begin
                 acc1 <= (others => '0');
                 acc2 <= (others => '0');
             elsif calc = '1' then
-                acc1 <= acc1 + coef11 + coef12 + coef13;
-                acc2 <= acc2 + coef21 + coef22 + coef23;
+                if bit_idx = (N-3) then
+                    acc1 <= acc1 - coef11 + coef12 + coef13;
+                    acc2 <= acc2 - coef21 + coef22 + coef23;
+                else
+                    acc1 <= acc1 + coef11 + coef12 + coef13;
+                    acc2 <= acc2 + coef21 + coef22 + coef23;
+                end if;
             end if;
         end if;
     end process;
